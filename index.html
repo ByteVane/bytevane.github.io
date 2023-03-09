@@ -1,0 +1,399 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>ByteVane's Blog</title><meta name="author" content="Byrne"><meta name="copyright" content="Byrne"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="ByteVane的部落格，一直在路上...">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ByteVane&#39;s Blog">
+<meta property="og:url" content="https://bytevane.com/index.html">
+<meta property="og:site_name" content="ByteVane&#39;s Blog">
+<meta property="og:description" content="ByteVane的部落格，一直在路上...">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bytevane.com/img/avatar.gif">
+<meta property="article:author" content="Byrne">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bytevane.com/img/avatar.gif"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://bytevane.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'ByteVane\'s Blog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-03-09 11:17:52'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Codepiee/blog/hexo/css/base.css"><link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Codepiee/blog/hexo/css/card_history.css"><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.gif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ByteVane's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/posts/c8d3cd92.html" title="电信光猫天翼网关4.0获取超级密码教程"><img class="post_bg" src="/img/guangmao.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="电信光猫天翼网关4.0获取超级密码教程"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/c8d3cd92.html" title="电信光猫天翼网关4.0获取超级密码教程">电信光猫天翼网关4.0获取超级密码教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-27T02:31:41.000Z" title="发表于 2022-04-27 10:31:41">2022-04-27</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-27T05:17:53.057Z" title="更新于 2022-04-27 13:17:53">2022-04-27</time></span></div><div class="content">电信光猫天翼网关的超级账号是telecomadmin，超级密码是随机的，以telecomadmin开头，后面有8位随机数字，有的光猫只要断电或者重启超级密码就会改变，本教程仅适用于电信光猫天翼网关4.0 中兴光猫版，本人测试的光猫型号中兴F610GV9、F7010C。其他版本型号光猫请勿测试。破解工具下载：传送门
+第一步：拔掉光猫光纤，恢复出厂设置，然后进行破解下载破解工具到电脑桌面解压
+获取临时的telnet账号和密码打开CMD输入：
+1cd C:\Users\codepiee\Desktop\光猫天翼4.0工具
+
+注：C:\Users\codepiee\Desktop\光猫天翼4.0工具，代表破解工具文件夹的路径，根据自己的文件夹位置修改
+然后输入：
+1factorymode_crack.exe -l xxx open -i 192.168.1.1 -p 8080
+
+注：有的光猫使用的是8080端口，IP地址默认是192.168.1.1
+或
+1factorymode_crack.exe -l xxx open -i 192.168.1.1
+
+如果打开成功会出现：
+Enter192. ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/be5a392e.html" title="手动搭建Xray+宝塔面板，让你的VPS发挥最大的用途"><img class="post_bg" src="/img/xraybaota.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="手动搭建Xray+宝塔面板，让你的VPS发挥最大的用途"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/be5a392e.html" title="手动搭建Xray+宝塔面板，让你的VPS发挥最大的用途">手动搭建Xray+宝塔面板，让你的VPS发挥最大的用途</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-02-16T06:49:22.000Z" title="发表于 2022-02-16 14:49:22">2022-02-16</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-02-16T07:51:36.618Z" title="更新于 2022-02-16 15:51:36">2022-02-16</time></span></div><div class="content">小白几分钟搞定Xray 手动搭建和宝塔面板共存最优的、最简单的配置方法。
+准备工具1、VPS 一台，重置好主流的操作系统
+2、域名一个，解析到该VPS。
+开始搭建Xray+宝塔更新系统centos更新系统
+1yum update -y
+
+Debian或ubuntu更新系统
+1apt update -y
+
+安装宝塔面板（PS:推荐大家使用 CentOS 系统安装宝塔面板，其他系统也可以，相关安装命令请访问 宝塔官网。国内版的宝塔面板需要绑定手机号，不想绑定手机号的，可以用宝塔国际版功能是一样的，安装命令请访问宝塔国际官网）
+国内安装脚本
+1yum install -y wget &amp;&amp; wget -O install.sh http:&#x2F;&#x2F;download.bt.cn&#x2F;install&#x2F;install_6.0.sh &amp;&amp; sh install.sh
+
+国际安装脚本
+1yum install -y wget &amp;&amp; wget -O install.sh http:&#x2F;&#x2F;www.aapanel. ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/80001ee3.html" title="Bitwarden密码管理器搭建教程二：官方版docker部署教程"><img class="post_bg" src="/img/bitwarden.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Bitwarden密码管理器搭建教程二：官方版docker部署教程"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/80001ee3.html" title="Bitwarden密码管理器搭建教程二：官方版docker部署教程">Bitwarden密码管理器搭建教程二：官方版docker部署教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-02-15T01:26:55.000Z" title="发表于 2022-02-15 09:26:55">2022-02-15</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-02-15T05:18:08.265Z" title="更新于 2022-02-15 13:18:08">2022-02-15</time></span></div><div class="content">bitwarden 作为一款开源的密码集中管理工具，其便捷性不用多说，支持多端同步使用，浏览器插件支持，密码导出备份，加密笔记，保存你的信用卡等私密信息。而最重要的是，Bitwarden 支持本地托管，可以搭建私人专属密码库，部署到自己的服务器、 NAS、树莓派等设备上去，所有的密码数据、通讯都不会经过第三方，更能让人放心。
+官方网站：Bitwarden
+官方项目：bitwarden / server
+一、自建Bitwarden服务前准备1、自己的一台云服务器或者家里有NAS：安装好主流的linux操作系统
+2、准备一个域名解析到服务器
+二、debian部署Bitwarden更换到root权限更新系统
+12su -apt-get update -y
+
+卸载旧版本
+旧版本的 Docker 被称为docker,docker.io或docker-engine. 如果安装了这些，请卸载它们：
+1apt-get remove docker docker-engine docker.io containerd runc
+
+安装 Docker 和 Docker Compose
+官方安装 Docker ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/9f454c66.html" title="Bitwarden密码管理器搭建教程一：docker安装第三方Rust版vaultwarden"><img class="post_bg" src="/img/bitwarden1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Bitwarden密码管理器搭建教程一：docker安装第三方Rust版vaultwarden"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/9f454c66.html" title="Bitwarden密码管理器搭建教程一：docker安装第三方Rust版vaultwarden">Bitwarden密码管理器搭建教程一：docker安装第三方Rust版vaultwarden</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-02-13T08:09:23.000Z" title="发表于 2022-02-13 16:09:23">2022-02-13</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-02-15T01:16:20.544Z" title="更新于 2022-02-15 09:16:20">2022-02-15</time></span></div><div class="content">Bitwarden是一款自由且开源的密码管理服务，用户可在加密的保管库中存储敏感信息（例如网站登录凭据）。Bitwarden平台提供有多种客户端应用程序，包括网页用户界面、桌面应用，浏览器扩展、移动应用以及命令行界面。Bitwarden提供云端托管服务，并支持自行部署解决方案。
+本篇教程包含群晖docker和服务器宝塔面板docker搭建教程
+第三方Rust版作者地址：传送门
+一、群晖Docker教程1.1、在群晖套件中心里安装docker
+
+
+1.2、打开docker在注册表里搜索“vaultwarden”双击下载镜像
+
+
+1.3、在File Station里docker文件夹里新建文件夹bitwarden，然后在bitwarden文件夹里新建文件夹data
+
+
+1.4、在docker-映像里双击下载的vaultwarden镜像开始部署
+
+
+1.5、选择高级设置，勾选“启用自动重新启动”。存储空间里添加文件夹选择刚刚新建的data文件夹，装载路径填/data/。端口设置里删除第一个端口，第二个本地端口改成和群晖没有冲突的其他端口。然后点应用，下一步开始部署
+
+
+
+
+1.6、部署完成后 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/a02e4232.html" title="只需几步轻松云编译openwrt"><img class="post_bg" src="/img/yunopenwrt.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="只需几步轻松云编译openwrt"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/a02e4232.html" title="只需几步轻松云编译openwrt">只需几步轻松云编译openwrt</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-03-28T05:50:18.000Z" title="发表于 2021-03-28 13:50:18">2021-03-28</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-02-09T00:37:42.124Z" title="更新于 2022-02-09 08:37:42">2022-02-09</time></span></div><div class="content">前言Github Ac­tions 是 Mi­crosoft 收购 GitHub 后推出的 CI/CD 服务，它提供了性能配置非常不错的虚拟服务器环境（E5 2vCPU/7G RAM），基于它可以进行构建、测试、打包、部署项目。对于公开仓库可免费无时间限制的使用，且单次使用时间长达 6 个小时，这对于编译 Open­Wrt 来说是非常充足的。不过 GitHub Ac­tions 有一定的使用门槛，首先要了解如何编写 workflow 文件。不过不用担心，博主已经编写好了相关的 work­flow 文件模版，只需要按照教程的步骤来操作即可。
+方案特点
+免费
+一键快速编译
+定时自动编译
+客制化编译
+并发编译（可同时进行20个编译任务）
+无需搭建编译环境（在线make menuconfig生成配置文件)
+无需消耗自己的计算机与服务器的计算资源（性感E5在线编译）
+无需担心磁盘空间不足（近60G磁盘空间）
+无需使用清理文件（内核更新不怕 boom ）
+编译速度快（编译时间1-2小时）
+编译成功率提升200%（万兆自由网络环境）
+全新环境（杜绝编译环境不干净导致编译失败）
+
+
+本解决方案是一个开 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/92044635.html" title="手动搭建Xray终极应用,全协议（Trojan,VLESS,Vmess）同时连接"><img class="post_bg" src="/img/xray.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="手动搭建Xray终极应用,全协议（Trojan,VLESS,Vmess）同时连接"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/92044635.html" title="手动搭建Xray终极应用,全协议（Trojan,VLESS,Vmess）同时连接">手动搭建Xray终极应用,全协议（Trojan,VLESS,Vmess）同时连接</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-03-24T06:11:57.000Z" title="发表于 2021-03-24 14:11:57">2021-03-24</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-02-09T00:54:28.853Z" title="更新于 2022-02-09 08:54:28">2022-02-09</time></span></div><div class="content">手动搭建xray终极应用，全协议（Trojan,VLESS,Vmess）同时连接，小白教程几分钟搞定。
+准备工具1、VPS 一台，重置好主流的操作系统
+2、域名一个，解析到该VPS。
+Xray开始搭建更新系统CentOS 需要安装开源发行软件包版本库，命令如下
+1yum update -y
+
+Debian更新系统
+1apt update -y
+
+域名证书申请安装依赖，debian或ubuntu执行
+1apt-get install -y socat curl
+
+centos执行
+1yum install -y socat curl
+
+安装acme.sh脚本
+1curl  https:&#x2F;&#x2F;get.acme.sh | sh -s email&#x3D;my@example.com
+
+出现：Install success!表示安装成功
+用acme.sh脚本申请证书
+开始签发证书,注意请将example.com替换成你的域名
+1acme.sh  --issue -d example.com   --standalone
+
+安装了nginx用下面命令
+1acme.sh --i ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/52b1112f.html" title="黑群晖6.2.3如何启用核显硬解"><img class="post_bg" src="/img/Synology.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="黑群晖6.2.3如何启用核显硬解"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/52b1112f.html" title="黑群晖6.2.3如何启用核显硬解">黑群晖6.2.3如何启用核显硬解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-03-24T04:18:44.000Z" title="发表于 2021-03-24 12:18:44">2021-03-24</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-02-09T01:31:50.787Z" title="更新于 2022-02-09 09:31:50">2022-02-09</time></span></div><div class="content">前言：黑群晖升级到6.2.3后默认不加载核显驱动的，下面介绍怎么开启核显
+准备工具：
+DS918+引导
+驱动包extra.lzma和extra2.lzma
+osfmount工具
+这里打包了供大家下载
+1、打开osfmount工具，选择mount new  选择引导文件
+
+
+选择中间的30MB分区
+
+
+取消read-only drive 只读
+
+
+双击下图所示区域
+
+
+把里面的extra.lzma和extra2.lzma删除掉，替换我给大家的准备的extra.lzma和extra2.lzma驱动
+
+点Dismount退出分区，至此引导的驱动包替换完成，然后重新写入U盘即可。
+
+群晖开启ssh用putty登陆输入
+1ls -la &#x2F;dev&#x2F;dri
+
+显示下图即是核显开启成功
+
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/d1512b84.html" title="打造高性能群晖NAS,H310+i58600T"><img class="post_bg" src="/img/heiqunhui.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="打造高性能群晖NAS,H310+i58600T"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/d1512b84.html" title="打造高性能群晖NAS,H310+i58600T">打造高性能群晖NAS,H310+i58600T</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-03-22T02:43:19.000Z" title="发表于 2021-03-22 10:43:19">2021-03-22</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-02-09T01:33:42.627Z" title="更新于 2022-02-09 09:33:42">2022-02-09</time></span></div><div class="content">前言：刚开始接触群晖nas是19年上的蜗牛的车，当时买的C款J1900的配置。买回来换了益衡电源和静音风扇，稳定运行到今年，发现性能跟不上了，于是萌生了升级配置了念头。在黄鱼上无意间看到了暴风二期j3455主板，果断买回来了。之前蜗牛装的是3617xs半洗白，现在想尝试一下918+毕竟可以硬解，但是这款主板装918+有非常多的问题，折腾了好久还是换成了3617xs。但是心有不甘还是想追求完美。于是秉着三五年不用升级，全部用全新的打造一个高性能的群晖nas
+上配件价格一览表
+CPU: i5-8600T —- 823元（全新散片）
+主板：华擎H310 ITX —- 569元（全新京东自营）
+电源：益衡7025B —- 255元（全新）
+机箱：万由410 —- 666元（全新不含电源）
+cpu风扇：ID COOLING IS 30 —- 84元（全新）
+内存条：酷兽DDR4 8G 2666 —- 199元（全新）
+总价格：2596元以上是配件和价格明细，下面就是装机了，装机很简单就不多介绍了，主要是理线，装机5分钟理线一小时，主要是把cpu风扇前面的空间让出来。
+下面开始装群晖系统需要用到的 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/6c3ccae4.html" title="最全的hexo搭建教程"><img class="post_bg" src="/img/hexodajian.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="最全的hexo搭建教程"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/6c3ccae4.html" title="最全的hexo搭建教程">最全的hexo搭建教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-03-09T03:11:16.000Z" title="发表于 2021-03-09 11:11:16">2021-03-09</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-02-09T01:33:15.656Z" title="更新于 2022-02-09 09:33:15">2022-02-09</time></span></div><div class="content">Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。。Hexo搭建步骤    境搭建    安装Hexo    Hexo部署到github
+环境搭建1. 安装Gitwindows：到git官网上下载,Download git,下载后会有一个Git Bash的命令行工具，以后就用这个工具来使用git。
+2. 安装nodejsHexo是基于nodeJS编写的，所以需要安装一下nodeJs和里面的npm工具。
+windows：nodejs选择LTS版本就行了。
+安装完后，打开命令行
+12node -vnpm -v
+
+检查一下有没有安装成功
+安装hexo前面git和nodejs安装好后，就可以安装hexo了，你可以先创建一个文件夹blog，然后cd到这个文件夹下（或者在这个文件夹下直接右键git bash打开）。
+输入命令
+1npm install hexo-cli -g
+
+依旧用hexo -v查看一下版本
+至此就全部安装完了。
+接下来初始化一下hexo
+1hexo init blog
+
+这个blog ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.gif" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Byrne</div><div class="author-info__description">ByteVane的部落格，一直在路上...</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Codepiee"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Codepiee" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:codepiee@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/c8d3cd92.html" title="电信光猫天翼网关4.0获取超级密码教程"><img src="/img/guangmao.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="电信光猫天翼网关4.0获取超级密码教程"/></a><div class="content"><a class="title" href="/posts/c8d3cd92.html" title="电信光猫天翼网关4.0获取超级密码教程">电信光猫天翼网关4.0获取超级密码教程</a><time datetime="2022-04-27T02:31:41.000Z" title="发表于 2022-04-27 10:31:41">2022-04-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/be5a392e.html" title="手动搭建Xray+宝塔面板，让你的VPS发挥最大的用途"><img src="/img/xraybaota.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="手动搭建Xray+宝塔面板，让你的VPS发挥最大的用途"/></a><div class="content"><a class="title" href="/posts/be5a392e.html" title="手动搭建Xray+宝塔面板，让你的VPS发挥最大的用途">手动搭建Xray+宝塔面板，让你的VPS发挥最大的用途</a><time datetime="2022-02-16T06:49:22.000Z" title="发表于 2022-02-16 14:49:22">2022-02-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/80001ee3.html" title="Bitwarden密码管理器搭建教程二：官方版docker部署教程"><img src="/img/bitwarden.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Bitwarden密码管理器搭建教程二：官方版docker部署教程"/></a><div class="content"><a class="title" href="/posts/80001ee3.html" title="Bitwarden密码管理器搭建教程二：官方版docker部署教程">Bitwarden密码管理器搭建教程二：官方版docker部署教程</a><time datetime="2022-02-15T01:26:55.000Z" title="发表于 2022-02-15 09:26:55">2022-02-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/9f454c66.html" title="Bitwarden密码管理器搭建教程一：docker安装第三方Rust版vaultwarden"><img src="/img/bitwarden1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Bitwarden密码管理器搭建教程一：docker安装第三方Rust版vaultwarden"/></a><div class="content"><a class="title" href="/posts/9f454c66.html" title="Bitwarden密码管理器搭建教程一：docker安装第三方Rust版vaultwarden">Bitwarden密码管理器搭建教程一：docker安装第三方Rust版vaultwarden</a><time datetime="2022-02-13T08:09:23.000Z" title="发表于 2022-02-13 16:09:23">2022-02-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/a02e4232.html" title="只需几步轻松云编译openwrt"><img src="/img/yunopenwrt.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="只需几步轻松云编译openwrt"/></a><div class="content"><a class="title" href="/posts/a02e4232.html" title="只需几步轻松云编译openwrt">只需几步轻松云编译openwrt</a><time datetime="2021-03-28T05:50:18.000Z" title="发表于 2021-03-28 13:50:18">2021-03-28</time></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="item-headline"><i class="fas fa-comment-dots"></i><span>最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div><div class="card-widget card-weibo"><div class="card-content"><div class="item-headline"><i class="fab fa-weibo"></i><span>微博热搜</span></div><div id="weibo-container" style="width: 100%; height: 150px;font-size: 95%;"></div></div></div><script defer="defer" data-pjax="data-pjax" src="/"></script><div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden;"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%;"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">9</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-12-11T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">10.1k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-03-09T03:17:52.198Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Byrne</div><div class="footer_custom_text"><p><a style="margin-inline:5px"target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为 Hexo" alt="HEXO"></a><a style="margin-inline:5px"target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用 Butterfly" alt="Butterfly"></a><a style="margin-inline:5px"target="_blank" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用 Jsdelivr 为静态资源提供CDN加速" alt="Jsdelivr"></a><a style="margin-inline:5px"target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由 GitHub 托管" alt="GitHub"></a><a style="margin-inline:5px"target="_blank"href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" alt="img" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const findTrueUrl = (array) => {
+    Promise.all(array.map(item =>
+      fetch(item.url).then(resp => resp.json()).then(data => {
+        const urlArray = data.body.match(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/ig)
+        if (data.user.login === 'utterances-bot') {
+          return urlArray.pop()
+        } else {
+          return urlArray.shift()
+        }
+      })
+    )).then(res => {
+        array = array.map((i,index)=> {
+          return {
+            ...i,
+            url: res[index]
+          }
+        })
+
+        saveToLocal.set('github-newest-comments', JSON.stringify(array), 10/(60*24))
+        generateHtml(array)
+    });
+  }
+
+  const getComment = () => {
+    fetch('https://api.github.com/repos/Codepiee/codepiee.github.io/issues/comments?sort=updated&direction=desc&per_page=6&page=1',{
+      "headers": {
+        Accept: 'application/vnd.github.v3.html+json'
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        const githubArray = data.map(item => {
+          return {
+            'avatar': item.user.avatar_url,
+            'content': changeContent(item.body_html),
+            'nick': item.user.login,
+            'url': item.issue_url,
+            'date': item.updated_at,
+            'githubUrl': item.html_url
+          }
+        })
+        findTrueUrl(githubArray)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      })
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('github-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script><script src="https://cdn.jsdelivr.net/gh/Codepiee/blog/hexo/js/card_history.js"></script><script src="https://cdn.jsdelivr.net/gh/Codepiee/blog/hexo/js/card_weibo.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

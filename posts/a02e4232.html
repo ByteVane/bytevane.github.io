@@ -1,0 +1,300 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>只需几步轻松云编译openwrt | ByteVane's Blog</title><meta name="keywords" content="云编译,openwrt"><meta name="author" content="Byrne"><meta name="copyright" content="Byrne"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言Github Ac­tions 是 Mi­crosoft 收购 GitHub 后推出的 CI&#x2F;CD 服务，它提供了性能配置非常不错的虚拟服务器环境（E5 2vCPU&#x2F;7G RAM），基于它可以进行构建、测试、打包、部署项目。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="只需几步轻松云编译openwrt">
+<meta property="og:url" content="https://bytevane.com/posts/a02e4232.html">
+<meta property="og:site_name" content="ByteVane&#39;s Blog">
+<meta property="og:description" content="前言Github Ac­tions 是 Mi­crosoft 收购 GitHub 后推出的 CI&#x2F;CD 服务，它提供了性能配置非常不错的虚拟服务器环境（E5 2vCPU&#x2F;7G RAM），基于它可以进行构建、测试、打包、部署项目。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bytevane.com/img/yunopenwrt.png">
+<meta property="article:published_time" content="2021-03-28T05:50:18.000Z">
+<meta property="article:modified_time" content="2022-02-09T00:37:42.124Z">
+<meta property="article:author" content="Byrne">
+<meta property="article:tag" content="云编译">
+<meta property="article:tag" content="openwrt">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bytevane.com/img/yunopenwrt.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://bytevane.com/posts/a02e4232"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '只需几步轻松云编译openwrt',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-02-09 08:37:42'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Codepiee/blog/hexo/css/base.css"><link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Codepiee/blog/hexo/css/card_history.css"><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.gif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/yunopenwrt.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ByteVane's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">只需几步轻松云编译openwrt</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-03-28T05:50:18.000Z" title="发表于 2021-03-28 13:50:18">2021-03-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-02-09T00:37:42.124Z" title="更新于 2022-02-09 08:37:42">2022-02-09</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">855</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="只需几步轻松云编译openwrt"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>Github Ac­tions 是 Mi­crosoft 收购 GitHub 后推出的 CI/CD 服务，它提供了性能配置非常不错的虚拟服务器环境（E5 2vCPU/7G RAM），基于它可以进行构建、测试、打包、部署项目。<span id="more"></span>对于公开仓库可免费无时间限制的使用，且单次使用时间长达 6 个小时，这对于编译 Open­Wrt 来说是非常充足的。不过 GitHub Ac­tions 有一定的使用门槛，首先要了解如何编写 workflow 文件。不过不用担心，博主已经编写好了相关的 work­flow 文件模版，只需要按照教程的步骤来操作即可。</p>
+<h4 id="方案特点"><a href="#方案特点" class="headerlink" title="方案特点"></a>方案特点</h4><ul>
+<li>免费</li>
+<li>一键快速编译</li>
+<li>定时自动编译</li>
+<li>客制化编译</li>
+<li>并发编译（可同时进行20个编译任务）</li>
+<li>无需搭建编译环境（在线<code>make menuconfig</code>生成配置文件)</li>
+<li>无需消耗自己的计算机与服务器的计算资源（性感E5在线编译）</li>
+<li>无需担心磁盘空间不足（近60G磁盘空间）</li>
+<li>无需使用清理文件（内核更新不怕 boom ）</li>
+<li>编译速度快（编译时间1-2小时）</li>
+<li>编译成功率提升200%（万兆自由网络环境）</li>
+<li>全新环境（杜绝编译环境不干净导致编译失败）</li>
+</ul>
+<blockquote>
+<p>本解决方案是一个开放平台，任何人都可以基于此打造自己专属的编译方案。</p>
+</blockquote>
+<h4 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h4><p><a target="_blank" rel="noopener" href="https://github.com/P3TERX/Actions-OpenWrt">https://github.com/P3TERX/Actions-OpenWrt</a></p>
+<h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/">GitHub</a> 账号</li>
+</ul>
+<h4 id="基础使用"><a href="#基础使用" class="headerlink" title="基础使用"></a>基础使用</h4><p>首先你必须要熟悉整个 Open­Wrt 的编译过程，这会让你非常容易的理解如何使用 GitHub Ac­tions 进行编译，即使你没有成功过。因为实际上本地编译近 90% 失败的原因是因为网络问题导致的，中国大陆特色，咱也不敢多说。GitHub Ac­tions 服务器由 Mi­crosoft Azure 提供，拥有万兆带宽，可以使编译成功率大大提升。</p>
+<ul>
+<li>在自己搭建编译环境中使用 <a target="_blank" rel="noopener" href="https://github.com/coolsnowwolf/lede">Lean’s OpenWrt</a> 源码生成<code>.config</code>文件。（或使用直接 SSH 连接到 Actions 进行操作，后面有说明。）</li>
+<li>进入 <a target="_blank" rel="noopener" href="https://github.com/P3TERX/Actions-OpenWrt">P3TERX/Actions-OpenWrt</a> 项目页面，点击页面中的 <strong>Use this template</strong>（使用这个模版）按钮。</li>
+</ul>
+<img src="/images/20200201183633.png" style="zoom: 80%;" />
+
+<ul>
+<li>填写仓库名称，然后点击<code>Create repository from template</code>（从模版创建储存库）按钮。</li>
+</ul>
+<img src="/images/20200201183634.png" style="zoom:80%;" />
+
+<ul>
+<li>经过几秒钟的等待，页面会跳转到新建的仓库，内容和我的项目是相同的，然后点击diy-part1.sh</li>
+</ul>
+<p><img src="/images/20210328140335.png"></p>
+<ul>
+<li>点击右侧的编辑按钮，去掉第14行前面的注释#号</li>
+</ul>
+<p><img src="/images/20210328140542.png"></p>
+<ul>
+<li>翻到页面最下方，点击<code>Commit changes</code>（提交新文件）按钮。</li>
+</ul>
+<p><img src="/images/20210328141034.png"></p>
+<ul>
+<li>在 Actions 页面选择<code>Build OpenWrt</code>，然后点击<code>Run Workflow</code>按钮，SSH 连接需把<code>SSH connection to Actions</code>的值改为<code>true</code>。即可开始编译</li>
+</ul>
+<p><img src="/images/20201011212837.png"></p>
+<ul>
+<li>在 Actions 日志页面等待执行到<code>SSH connection to Actions</code>步骤，会出现下面的信息，点击url链接</li>
+</ul>
+<p><img src="/images/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20210328141810.png"></p>
+<ul>
+<li><p>在浏览器中打开使用网页终端。（网页终端可能会遇到黑屏的情况，按 <code>Ctrl</code>+<code>C</code> 即可）然后输入下面代码回车</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd openwrt &amp;&amp; make menuconfig</span><br></pre></td></tr></table></figure></li>
+<li><p>然后就出现了熟悉的菜单页面</p>
+</li>
+<li><p>完成后按<code>Ctrl</code>+<code>D</code>组合键或执行<code>exit</code>命令退出，后续编译工作将自动进行。</p>
+</li>
+<li><p>最后经过一两个小时的等待，不出意外你就可以在 Actions 页面看到已经打包好的固件目录压缩包。</p>
+</li>
+</ul>
+<p><img src="/images/20200201183636.png"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Byrne</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://bytevane.com/posts/a02e4232.html">https://bytevane.com/posts/a02e4232.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://bytevane.com" target="_blank">ByteVane's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BA%91%E7%BC%96%E8%AF%91/">云编译</a><a class="post-meta__tags" href="/tags/openwrt/">openwrt</a></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/92044635.html"><img class="prev-cover" src="/img/xray.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">手动搭建Xray终极应用,全协议（Trojan,VLESS,Vmess）同时连接</div></div></a></div><div class="next-post pull-right"><a href="/posts/9f454c66.html"><img class="next-cover" src="/img/bitwarden1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Bitwarden密码管理器搭建教程一：docker安装第三方Rust版vaultwarden</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Gitalk</span><span class="switch-btn"></span><span class="second-comment">Twikoo</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.gif" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Byrne</div><div class="author-info__description">ByteVane的部落格，一直在路上...</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Codepiee"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Codepiee" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:codepiee@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%A1%88%E7%89%B9%E7%82%B9"><span class="toc-number">2.</span> <span class="toc-text">方案特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="toc-number">3.</span> <span class="toc-text">项目地址</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">4.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8"><span class="toc-number">5.</span> <span class="toc-text">基础使用</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/c8d3cd92.html" title="电信光猫天翼网关4.0获取超级密码教程"><img src="/img/guangmao.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="电信光猫天翼网关4.0获取超级密码教程"/></a><div class="content"><a class="title" href="/posts/c8d3cd92.html" title="电信光猫天翼网关4.0获取超级密码教程">电信光猫天翼网关4.0获取超级密码教程</a><time datetime="2022-04-27T02:31:41.000Z" title="发表于 2022-04-27 10:31:41">2022-04-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/be5a392e.html" title="手动搭建Xray+宝塔面板，让你的VPS发挥最大的用途"><img src="/img/xraybaota.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="手动搭建Xray+宝塔面板，让你的VPS发挥最大的用途"/></a><div class="content"><a class="title" href="/posts/be5a392e.html" title="手动搭建Xray+宝塔面板，让你的VPS发挥最大的用途">手动搭建Xray+宝塔面板，让你的VPS发挥最大的用途</a><time datetime="2022-02-16T06:49:22.000Z" title="发表于 2022-02-16 14:49:22">2022-02-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/80001ee3.html" title="Bitwarden密码管理器搭建教程二：官方版docker部署教程"><img src="/img/bitwarden.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Bitwarden密码管理器搭建教程二：官方版docker部署教程"/></a><div class="content"><a class="title" href="/posts/80001ee3.html" title="Bitwarden密码管理器搭建教程二：官方版docker部署教程">Bitwarden密码管理器搭建教程二：官方版docker部署教程</a><time datetime="2022-02-15T01:26:55.000Z" title="发表于 2022-02-15 09:26:55">2022-02-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/9f454c66.html" title="Bitwarden密码管理器搭建教程一：docker安装第三方Rust版vaultwarden"><img src="/img/bitwarden1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Bitwarden密码管理器搭建教程一：docker安装第三方Rust版vaultwarden"/></a><div class="content"><a class="title" href="/posts/9f454c66.html" title="Bitwarden密码管理器搭建教程一：docker安装第三方Rust版vaultwarden">Bitwarden密码管理器搭建教程一：docker安装第三方Rust版vaultwarden</a><time datetime="2022-02-13T08:09:23.000Z" title="发表于 2022-02-13 16:09:23">2022-02-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/a02e4232.html" title="只需几步轻松云编译openwrt"><img src="/img/yunopenwrt.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="只需几步轻松云编译openwrt"/></a><div class="content"><a class="title" href="/posts/a02e4232.html" title="只需几步轻松云编译openwrt">只需几步轻松云编译openwrt</a><time datetime="2021-03-28T05:50:18.000Z" title="发表于 2021-03-28 13:50:18">2021-03-28</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Byrne</div><div class="footer_custom_text"><p><a style="margin-inline:5px"target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为 Hexo" alt="HEXO"></a><a style="margin-inline:5px"target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用 Butterfly" alt="Butterfly"></a><a style="margin-inline:5px"target="_blank" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用 Jsdelivr 为静态资源提供CDN加速" alt="Jsdelivr"></a><a style="margin-inline:5px"target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由 GitHub 托管" alt="GitHub"></a><a style="margin-inline:5px"target="_blank"href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" alt="img" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: 'cd833b62a456d7bb8317',
+      clientSecret: '762c029d52e9f8910c598778751364155c78afc7',
+      repo: 'codepiee.github.io',
+      owner: 'Codepiee',
+      admin: ['Codepiee'],
+      id: '94ede669646a1ef98e2018cf62af0d41',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo-codepiee.vercel.app/',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.vemoji)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo-codepiee.vercel.app/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      document.getElementById('twikoo-count').innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Gitalk' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script><script src="https://cdn.jsdelivr.net/gh/Codepiee/blog/hexo/js/card_history.js"></script><script src="https://cdn.jsdelivr.net/gh/Codepiee/blog/hexo/js/card_weibo.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
